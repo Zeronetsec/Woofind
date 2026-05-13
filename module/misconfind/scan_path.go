@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package misconfind
 
@@ -6,7 +6,7 @@ import (
     "os"
     "fmt"
     "path/filepath"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func scanPath(root string, patterns []string) {

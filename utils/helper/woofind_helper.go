@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package helper
 
@@ -7,18 +7,18 @@ import (
     "fmt"
     "encoding/json"
     "io/fs"
-    "gospel/utils/color"
-    "gospel/utils/birthday"
+    "woofind/utils/color"
+    "woofind/utils/birthday"
 )
 
 //go:embed metadata/*
 var MetadataFS embed.FS
 
-func GospelHelper() {
-    birthday.GospelBirthDay()
+func WoofindHelper() {
+    birthday.WoofindBirthDay()
 
     fmt.Printf(
-        "%sUsage: %sgospel %s<command> [<args>]%s\n",
+        "%sUsage: %swoofind %s<command> [<args>]%s\n",
         color.N, color.GG, color.CC, color.N,
     )
 

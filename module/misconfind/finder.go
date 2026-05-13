@@ -1,11 +1,11 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package misconfind
 
 import (
     "fmt"
     "embed"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 //go:embed patterns/*

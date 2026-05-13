@@ -1,11 +1,11 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package checkroot
 
 import (
     "fmt"
     "os"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func GetCheck() {

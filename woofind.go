@@ -1,17 +1,17 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package main
 
 import (
     "os"
     "strings"
-    "gospel/console"
+    "woofind/console"
 )
 
 func main() {
     args := os.Args[1:]
     input := strings.Join(args, " ")
-    console.GospelConsole(input)
+    console.WoofindConsole(input)
 }
 
 // Copyright (c) 2026 Zeronetsec

@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package sysinfo
 
@@ -6,7 +6,7 @@ import (
     "fmt"
     "strings"
     "os/exec"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func execShell(cmd string, args ...string) string {

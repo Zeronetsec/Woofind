@@ -1,11 +1,11 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package misconfind
 
 import (
     "fmt"
     "os"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func checkPermission(path string, info os.FileInfo) {

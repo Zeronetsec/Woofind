@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package procinfo
 
@@ -6,7 +6,7 @@ import (
     "fmt"
     "sort"
     "github.com/shirou/gopsutil/v3/process"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func ShowProcInfo() {

@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package sysinfo
 
@@ -10,7 +10,7 @@ import (
     "github.com/shirou/gopsutil/v3/mem"
     "github.com/shirou/gopsutil/v3/cpu"
     "github.com/shirou/gopsutil/v3/host"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func MachineInfo() {

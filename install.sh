@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Gospel Project
+# https://github.com/Zeronetsec/Woofind
 
 N='\033[0m'
 R='\033[1;31m'
@@ -7,8 +7,8 @@ B='\033[1;34m'
 GG='\033[0;32m'
 DG='\033[1;90m'
 
-base="$PREFIX/opt"
-symlink="$PREFIX/bin"
+base="${PREFIX}/opt"
+symlink="${PREFIX}/bin"
 bkdate="$(command date +%Y_%b_%d_%H_%M_%S)"
 
 path="$(
@@ -17,13 +17,13 @@ path="$(
     )" &> /dev/null && pwd
 )"
 
-if [[ "$1" == "--backup" ]]; then
+if [[ "${1}" == "--backup" ]]; then
     backup="true"
 fi
 
 function install() {
-    local cmd="$1"
-    local desc="$2"
+    local cmd="${1}"
+    local desc="${2}"
     echo -e "\n${B}[*] ${N}${desc}"
     eval "${cmd}" >/dev/null
     local status=$?
@@ -41,24 +41,24 @@ function getinstall() {
         exit 1
     fi
 
-    echo -e "$1" | while IFS= read -r line; do
-        [[ -z "$line" ]] && continue
-        IFS="::" read -ra pkgs <<< "$line"
+    echo -e "${1}" | while IFS= read -r line; do
+        [[ -z "${line}" ]] && continue
+        IFS="::" read -ra pkgs <<< "${line}"
         for pkg in "${pkgs[@]}"; do
-            pkg="$(echo -e "$pkg" | command xargs)"
-            if eval "$installw $pkg" 2>/dev/null; then
+            pkg="$(echo -e "${pkg}" | command xargs)"
+            if eval "${installw} ${pkg}" 2>/dev/null; then
                 break
             fi
         done
     done
 }
 
-if [[ ! -d "$path" ]]; then
+if [[ ! -d "${path}" ]]; then
     echo -e "\n${R}[!] ${N}Folder: ${GG}${path} ${N}not found! \n"
     exit 1
 fi
 
-echo -e "\n${B}[*] ${N}Installing: ${GG}Gospel${N}"
+echo -e "\n${B}[*] ${N}Installing: ${GG}Woofind${N}"
 
 pack=(
     "golang"
@@ -71,53 +71,53 @@ for i in "${pack[@]}"; do
         "Installing: ${GG}${i}${N}"
 done
 
-if [[ ! -d "$base" ]]; then
+if [[ ! -d "${base}" ]]; then
     install \
         "command mkdir -p ${base}" \
         "Create directory: ${GG}${base}${N}"
 fi
 
 
-if [[ "$backup" == "true" && -d "$base/gospel" ]]; then
-    cd "$base"
+if [[ "${backup}" == "true" && -d "${base}/woofind" ]]; then
+    cd "${base}"
     install \
-        "command zip -r gospel_${bkdate}.bak.zip gospel" \
-        "Backup: ${GG}${base}/gospel ${DG}=> ${GG}${base}/gospel_${bkdate}.bak.zip${N}"
+        "command zip -r woofind_${bkdate}.bak.zip woofind" \
+        "Backup: ${GG}${base}/woofind ${DG}=> ${GG}${base}/woofind_${bkdate}.bak.zip${N}"
     cd
 fi
 
-if [[ -d "$base/gospel" ]]; then
+if [[ -d "${base}/woofind" ]]; then
     install \
-        "command rm -rf ${base}/gospel" \
-        "Removing: ${GG}old gospel${N}"
+        "command rm -rf ${base}/woofind" \
+        "Removing: ${GG}old woofind${N}"
 fi
 
 install \
-    "command mv ${path} ${base}/gospel" \
-    "Moving: ${GG}${path} ${DG}=> ${GG}${base}/gospel${N}"
+    "command mv ${path} ${base}/woofind" \
+    "Moving: ${GG}${path} ${DG}=> ${GG}${base}/woofind${N}"
 
-cd "$base/gospel"
+cd "${base}/woofind"
 install \
     "command go mod tidy" \
-    "Retidy: ${GG}gospel${N}"
+    "Retidy: ${GG}woofind${N}"
 
 install \
-    "command go build -v -o gospel" \
-    "Building: ${GG}gospel${N}"
+    "command go build -v -o woofind" \
+    "Building: ${GG}woofind${N}"
 cd
 
 install \
-    "command ln -sf ${base}/gospel/gospel ${symlink}/gospel" \
-    "Symlink: ${GG}${base}/gospel/gospel ${DG}=> ${GG}${symlink}/gospel${N}"
+    "command ln -sf ${base}/woofind/woofind ${symlink}/woofind" \
+    "Symlink: ${GG}${base}/woofind/woofind ${DG}=> ${GG}${symlink}/woofind${N}"
 
 printf '\n'
-if command -v gospel &>/dev/null; then
-    echo -e "${GG}[+] ${N}Gospel installed!"
-    echo -e "${GG}[+] ${N}Usage: ${GG}gospel --help ${N}to show helper"
+if command -v woofind &>/dev/null; then
+    echo -e "${GG}[+] ${N}Woofind installed!"
+    echo -e "${GG}[+] ${N}Usage: ${GG}woofind --help ${N}to show helper"
     printf '\n'
     exit 0
 else
-    echo -e "${R}[!] ${N}Failed installing gospel!"
+    echo -e "${R}[!] ${N}Failed installing woofind!"
     printf '\n'
     exit 1
 fi

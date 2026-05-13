@@ -1,4 +1,4 @@
-module gospel
+module woofind
 
 go 1.26.1
 

@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package dumpstring
 
@@ -11,7 +11,7 @@ import (
     "encoding/base32"
     "encoding/base64"
     "encoding/hex"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func Analyzer(val string) {

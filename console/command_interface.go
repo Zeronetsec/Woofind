@@ -1,20 +1,20 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package console
 
 import (
     "time"
-    "gospel/utils/invinput"
-    "gospel/utils/uwu"
-    "gospel/utils/version"
-    "gospel/utils/helper"
-    "gospel/utils/cursor"
-    "gospel/module/sysinfo"
-    "gospel/module/procinfo"
-    "gospel/module/checkroot"
-    "gospel/module/dumpstring"
-    "gospel/module/decode"
-    "gospel/module/misconfind"
+    "woofind/utils/invinput"
+    "woofind/utils/uwu"
+    "woofind/utils/version"
+    "woofind/utils/helper"
+    "woofind/utils/cursor"
+    "woofind/module/sysinfo"
+    "woofind/module/procinfo"
+    "woofind/module/checkroot"
+    "woofind/module/dumpstring"
+    "woofind/module/decode"
+    "woofind/module/misconfind"
 )
 
 type Command interface {
@@ -88,14 +88,14 @@ func (c UWU) Execute(args []string) {
 type Version struct{}
 func (c Version) Execute(args []string) {
     cursor.Hide()
-    version.GospelVersion()
+    version.WoofindVersion()
     cursor.Visible()
 }
 
 type Helper struct{}
 func (c Helper) Execute(args []string) {
     cursor.Hide()
-    helper.GospelHelper()
+    helper.WoofindHelper()
     cursor.Visible()
 }
 

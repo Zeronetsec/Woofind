@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package decode
 
@@ -7,7 +7,7 @@ import (
     "encoding/hex"
     "encoding/base32"
     "encoding/base64"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func brute(data []byte, depth int) {

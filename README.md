@@ -1,13 +1,13 @@
-<!-- Gospel Project -->
+<!-- https://github.com/Zeronetsec/Woofind -->
 
-[![version](https://img.shields.io/badge/Gospel-Version%201.0-blue.svg?maxAge=259200)]()
+[![version](https://img.shields.io/badge/Woofind-Version%201.0-blue.svg?maxAge=259200)]()
 [![gover](https://img.shields.io/badge/Go-Version%201.26.1-blue.svg)]()
 [![os](https://img.shields.io/badge/Supported%20OS-Linux-blue.svg)]()
 [![license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-# Gospel
-Gospel is an all-in-one CLI toolkit for system exploration, security auditing, and data inspection. <br>
-From decoding obscure strings to uncovering system misconfigurations, Gospel gives you deeper insight into your system.
+# Woofind
+Woofind is an all-in-one CLI toolkit for system exploration, security auditing, and data inspection. <br>
+From decoding obscure strings to uncovering system misconfigurations, Woofind gives you deeper insight into your system.
 
 ## Features
 - Inspect system and hardware information
@@ -19,8 +19,8 @@ From decoding obscure strings to uncovering system misconfigurations, Gospel giv
 
 ## Installation
 ```bash
-git clone https://github.com/Zeronetsec/Gospel.git
-cd Gospel
+git clone https://github.com/Zeronetsec/Woofind.git
+cd Woofind
 chmod +x install.sh
 ./install.sh
 
@@ -30,11 +30,11 @@ chmod +x install.sh
 
 ## Usage
 ```bash
-gospel --misconfind <path>
-gospel --dumpstring <string>
-gospel --decode <string|file>
-gospel --procinfo
-gospel --sysinfo
+woofind --misconfind <path>
+woofind --dumpstring <string>
+woofind --decode <string|file>
+woofind --procinfo
+woofind --sysinfo
 ```
 And more commands.
 

@@ -1,20 +1,20 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package version
 
 import (
     "fmt"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 const (
-    tools = "Gospel"
+    tools = "Woofind"
     version = "v1.0"
     creator = "Zeronetsec"
-    homepage = "https://github.com/Zeronetsec/Gospel"
+    homepage = "https://github.com/Zeronetsec/Woofind"
 )
 
-func GospelVersion() {
+func WoofindVersion() {
     fmt.Printf(
         "%sProject: %s%s%s\n",
         color.N, color.GG, tools, color.N,

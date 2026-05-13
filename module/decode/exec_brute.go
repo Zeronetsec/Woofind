@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package decode
 
@@ -7,7 +7,7 @@ import (
     "strings"
     "time"
     "os"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 var visited = make(map[string]bool)

@@ -1,10 +1,10 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package invinput
 
 import (
     "fmt"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func Invalid() {
@@ -14,7 +14,7 @@ func Invalid() {
     )
 
     fmt.Printf(
-        "%s[!] %sTry: %sgospel --help%s\n",
+        "%s[!] %sTry: %swoofind --help%s\n",
         color.R, color.N, color.GG, color.N,
     )
 }

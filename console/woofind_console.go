@@ -1,13 +1,13 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package console
 
 import (
     "os"
-    "gospel/utils/invinput"
+    "woofind/utils/invinput"
 )
 
-func GospelConsole(input string) {
+func WoofindConsole(input string) {
     args := os.Args
     if len(args) < 2 {
         invinput.Invalid()

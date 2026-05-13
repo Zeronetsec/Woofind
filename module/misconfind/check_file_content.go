@@ -1,4 +1,4 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package misconfind
 
@@ -7,7 +7,7 @@ import (
     "bufio"
     "strings"
     "fmt"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
 func checkFileContent(path string, patterns []string) {

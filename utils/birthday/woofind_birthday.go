@@ -1,19 +1,19 @@
-// Gospel Project
+// https://github.com/Zeronetsec/Woofind
 
 package birthday
 
 import (
     "fmt"
     "time"
-    "gospel/utils/color"
+    "woofind/utils/color"
 )
 
-func GospelBirthDay() {
+func WoofindBirthDay() {
     birthDate := "03-27"
     now := time.Now().Format("01-02")
     if now == birthDate {
         fmt.Printf(
-            "%s› %sHappy birthday for %sgospel %s🎉\n",
+            "%s› %sHappy birthday for %swoofind %s🎉\n",
             color.R, color.N, color.GG, color.N,
         )
         fmt.Println()
