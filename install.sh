@@ -7,8 +7,14 @@ B='\033[1;34m'
 GG='\033[0;32m'
 DG='\033[1;90m'
 
-base="${PREFIX}/opt"
-symlink="${PREFIX}/bin"
+if [[ -z "${PREFIX}" ]]; then
+    prefix="/usr"
+else
+    prefix="${PREFIX}"
+fi
+
+base="${prefix}/opt"
+symlink="${prefix}/bin"
 bkdate="$(command date +%Y_%b_%d_%H_%M_%S)"
 
 path="$(
@@ -54,11 +60,11 @@ function getinstall() {
 }
 
 if [[ ! -d "${path}" ]]; then
-    echo -e "\n${R}[!] ${N}Folder: ${GG}${path} ${N}not found! \n"
+    echo -e "${R}[!] ${N}Folder: ${GG}${path} ${N}not found! \n"
     exit 1
 fi
 
-echo -e "\n${B}[*] ${N}Installing: ${GG}Woofind${N}"
+echo -e "${B}[*] ${N}Installing: ${GG}Woofind${N}"
 
 pack=(
     "golang"
@@ -67,7 +73,7 @@ pack=(
 
 for i in "${pack[@]}"; do
     install \
-        "getinstall ${i} -y" \
+        "getinstall ${i}" \
         "Installing: ${GG}${i}${N}"
 done
 
@@ -114,11 +120,9 @@ printf '\n'
 if command -v woofind &>/dev/null; then
     echo -e "${GG}[+] ${N}Woofind installed!"
     echo -e "${GG}[+] ${N}Usage: ${GG}woofind --help ${N}to show helper"
-    printf '\n'
     exit 0
 else
     echo -e "${R}[!] ${N}Failed installing woofind!"
-    printf '\n'
     exit 1
 fi
 
