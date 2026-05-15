@@ -1,6 +1,6 @@
 module woofind
 
-go 1.26.1
+go 1.26.3
 
 require github.com/shirou/gopsutil/v3 v3.24.5
 
