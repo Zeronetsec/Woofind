@@ -8,6 +8,7 @@ import (
     "strings"
     "fmt"
     "woofind/utils/color"
+    "woofind/utils/logger"
 )
 
 func checkFileContent(path string, patterns []string) {
@@ -23,6 +24,7 @@ func checkFileContent(path string, patterns []string) {
 
     file.Seek(0, 0)
 
+    log := logger.NewLogger("misconfind")
     scanner := bufio.NewScanner(file)
     lineNum := 0
 
@@ -36,6 +38,13 @@ func checkFileContent(path string, patterns []string) {
                     "%s[Alert] %sPattern: %s%s %sin %s%s%s:%s%d%s\n",
                     color.R, color.N, color.GG, p, color.N, color.GG, path, color.DG, color.GG, lineNum, color.N,
                 )
+
+                logMess := fmt.Sprintf(
+                    "Alert pattern: %s in %s (%d)",
+                    p, path, lineNum,
+                )
+
+                log.Log(":", logMess)
             }
         }
     }
