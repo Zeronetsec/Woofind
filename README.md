@@ -14,17 +14,24 @@ From decoding obscure strings to uncovering system misconfigurations, Woofind gi
 - Detect misconfigurations and potential risks
 - Decode and analyze encoded data automatically
 - Extract insights from strings (entropy, hashes, metadata)
-- And more
+- And more.
+
+## Disclaimer
+Please read the
+[DISCLAIMER](https://github.com/Zeronetsec/Woofind/blob/main/DISCLAIMER.md)
+before use.
 
 ## Installation
 ```bash
 git clone https://github.com/Zeronetsec/Woofind.git
 cd Woofind
 chmod +x install.sh
-./install.sh
 
-# for backup
-./install.sh --backup
+# termux / linux (root)
+./install.sh # --backup
+
+# linux (user)
+sudo ./install.sh # --backup
 ```
 
 ## Usage
@@ -38,6 +45,6 @@ woofind --sysinfo
 And more commands.
 
 ## License
-This project is licensed under the MIT License. <br>
+This project is licensed under the MIT License.
 
 <!-- Copyright (c) 2026 Zeronetsec -->
