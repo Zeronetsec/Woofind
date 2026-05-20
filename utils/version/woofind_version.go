@@ -8,7 +8,7 @@ import (
 )
 
 const (
-    tools = "Woofind"
+    name = "Woofind"
     version = "v0.1"
     creator = "Zeronetsec"
     homepage = "https://github.com/Zeronetsec/Woofind"
@@ -16,8 +16,8 @@ const (
 
 func WoofindVersion() {
     fmt.Printf(
-        "%sProject: %s%s%s\n",
-        color.N, color.GG, tools, color.N,
+        "%sName: %s%s%s\n",
+        color.N, color.GG, name, color.N,
     )
 
     fmt.Printf(
