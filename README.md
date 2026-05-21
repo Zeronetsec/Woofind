@@ -18,7 +18,7 @@ From decoding obscure strings to uncovering system misconfigurations, Woofind gi
 
 ## Disclaimer
 Please read the
-[DISCLAIMER](https://github.com/Zeronetsec/Woofind/blob/main/DISCLAIMER.md)
+[DISCLAIMER](DISCLAIMER.md)
 before use. <br>
 Use at your own risk.
 
