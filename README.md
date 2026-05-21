@@ -24,7 +24,7 @@ Use at your own risk.
 
 ## Installation
 ```bash
-git clone https://github.com/Zeronetsec/Woofind.git
+git clone https://github.com/Zeronetsec/Woofind
 cd Woofind
 chmod +x install.sh
 
