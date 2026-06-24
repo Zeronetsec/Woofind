@@ -10,7 +10,7 @@ import (
     "github.com/shirou/gopsutil/v3/mem"
     "github.com/shirou/gopsutil/v3/cpu"
     "github.com/shirou/gopsutil/v3/host"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func MachineInfo() {

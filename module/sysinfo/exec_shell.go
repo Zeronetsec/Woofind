@@ -6,7 +6,7 @@ import (
     "fmt"
     "strings"
     "os/exec"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func execShell(cmd string, args ...string) string {

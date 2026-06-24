@@ -25,11 +25,11 @@ func Nyanners(duration time.Duration) {
     for {
         select {
             case <-end:
-                fmt.Print("\033[K")
+                fmt.Print("\x1b[K")
                 return
             default:
                 fmt.Print(
-                    "\r%s\033[K",
+                    "\r%s\x1b[K",
                     faces[kaomoji%len(faces)],
                 )
             time.Sleep(delay)

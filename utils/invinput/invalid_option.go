@@ -4,13 +4,13 @@ package invinput
 
 import (
     "fmt"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
-func Invalid() {
+func InvalidOption(input string) {
     fmt.Printf(
-        "%s[!] %sInvalid input!\n",
-        color.R, color.N,
+        "%s[!] %sInvalid option: %s%s%s\n",
+        color.R, color.N, color.GG, input, color.N,
     )
 
     fmt.Printf(

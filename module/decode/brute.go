@@ -7,7 +7,7 @@ import (
     "encoding/hex"
     "encoding/base32"
     "encoding/base64"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func brute(data []byte, depth int) {

@@ -4,13 +4,13 @@ package invinput
 
 import (
     "fmt"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
-func Unknown(input string) {
+func MissingArgument() {
     fmt.Printf(
-        "%s[!] %sInvalid command: %s%s%s\n",
-        color.R, color.N, color.GG, input, color.N,
+        "%s[!] %sMissing argument!\n",
+        color.R, color.N,
     )
 
     fmt.Printf(

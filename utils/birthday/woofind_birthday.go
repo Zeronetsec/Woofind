@@ -5,7 +5,7 @@ package birthday
 import (
     "fmt"
     "time"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func WoofindBirthDay() {

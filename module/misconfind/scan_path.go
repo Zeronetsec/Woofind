@@ -6,7 +6,7 @@ import (
     "os"
     "fmt"
     "path/filepath"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func scanPath(root string, patterns []string) {

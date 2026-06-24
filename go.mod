@@ -1,4 +1,4 @@
-module woofind
+module github.com/Zeronetsec/Woofind
 
 go 1.26.3
 

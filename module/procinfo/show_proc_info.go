@@ -6,7 +6,7 @@ import (
     "fmt"
     "sort"
     "github.com/shirou/gopsutil/v3/process"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func ShowProcInfo() {

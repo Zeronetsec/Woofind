@@ -7,7 +7,7 @@ import (
     "strings"
     "time"
     "os"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 var visited = make(map[string]bool)

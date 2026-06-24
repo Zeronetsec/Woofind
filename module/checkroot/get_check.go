@@ -5,7 +5,7 @@ package checkroot
 import (
     "fmt"
     "os"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func GetCheck() {

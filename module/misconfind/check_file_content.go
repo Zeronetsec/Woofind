@@ -7,8 +7,8 @@ import (
     "bufio"
     "strings"
     "fmt"
-    "woofind/utils/color"
-    "woofind/utils/logger"
+    "github.com/Zeronetsec/Woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/logger"
 )
 
 func checkFileContent(path string, patterns []string) {

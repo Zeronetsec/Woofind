@@ -7,24 +7,26 @@ import (
     "fmt"
     "encoding/json"
     "io/fs"
-    "woofind/utils/color"
-    "woofind/utils/birthday"
+    "github.com/Zeronetsec/Woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/birthday"
+    "github.com/Zeronetsec/Woofind/utils/banner"
 )
 
 //go:embed metadata/*
 var MetadataFS embed.FS
 
 func WoofindHelper() {
+    banner.Show()
     birthday.WoofindBirthDay()
 
     fmt.Printf(
-        "%sUsage: %swoofind %s<command> [<args>]%s\n",
+        "%sUsage: %swoofind %s<option> [<args>]%s\n",
         color.N, color.GG, color.CC, color.N,
     )
 
     fmt.Println()
     fmt.Printf(
-        "%sAvailable commands:\n",
+        "%sAvailable options:\n",
         color.N,
     )
 
@@ -55,13 +57,13 @@ func WoofindHelper() {
         }
 
         fmt.Printf(
-            "    %s› %s%s%s%s%s\n",
-            color.R, color.GG, hp.Command, color.CC, args, color.N,
+            "    %s* %s%s%s%s%s\n",
+            color.DG, color.GG, hp.Command, color.CC, args, color.N,
         )
 
         fmt.Printf(
-            "    %s└──%s› %s%s%s\n",
-            color.DG, color.B, color.WW, hp.Description, color.N,
+            "    %s└── %s%s%s\n",
+            color.DG, color.WW, hp.Description, color.N,
         )
     }
 }

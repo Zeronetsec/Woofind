@@ -5,7 +5,7 @@ package main
 import (
     "os"
     "strings"
-    "woofind/console"
+    "github.com/Zeronetsec/Woofind/console"
 )
 
 func main() {

@@ -5,8 +5,8 @@ package misconfind
 import (
     "fmt"
     "os"
-    "woofind/utils/color"
-    "woofind/utils/logger"
+    "github.com/Zeronetsec/Woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/logger"
 )
 
 func checkPermission(path string, info os.FileInfo) {

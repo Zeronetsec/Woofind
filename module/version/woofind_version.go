@@ -4,7 +4,7 @@ package version
 
 import (
     "fmt"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 const (

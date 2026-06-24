@@ -11,7 +11,7 @@ import (
     "encoding/base32"
     "encoding/base64"
     "encoding/hex"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 func Analyzer(val string) {

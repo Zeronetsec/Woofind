@@ -5,7 +5,7 @@ package misconfind
 import (
     "fmt"
     "embed"
-    "woofind/utils/color"
+    "github.com/Zeronetsec/Woofind/utils/color"
 )
 
 //go:embed patterns/*
