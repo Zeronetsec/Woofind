@@ -1,4 +1,4 @@
-// https://github.com/Zeronetsec/Znskit
+// https://github.com/Zeronetsec/Woofind
 
 package banner
 
