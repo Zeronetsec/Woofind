@@ -8,10 +8,10 @@
 Woofind is a CLI toolkit for system exploration, security auditing, and data inspection.
 
 ## Features
-- Analyze running processes and resource usage
-- Detect misconfigurations and potential risks
-- Decode and analyze encoded data automatically
-- Extract insights from strings (entropy, hashes, metadata)
+- Analyze running processes and resource usage.
+- Detect misconfigurations and potential risks.
+- Decode and analyze encoded data automatically.
+- Extract insights from strings (entropy, hashes, metadata).
 - And more features.
 
 ## Disclaimer
