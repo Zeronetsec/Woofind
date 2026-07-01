@@ -42,4 +42,4 @@ function install::installer() {
                 ${bin}/woofind
         " \
         "Symlink: ${GG}${opt}/woofind/woofind ${DG}-> ${GG}${bin}/woofind${N}"
-}
+}; readonly -f install::installer
