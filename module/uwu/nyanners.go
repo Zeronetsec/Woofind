@@ -28,7 +28,7 @@ func Nyanners(duration time.Duration) {
                 fmt.Print("\x1b[K")
                 return
             default:
-                fmt.Print(
+                fmt.Printf(
                     "\r%s\x1b[K",
                     faces[kaomoji%len(faces)],
                 )
