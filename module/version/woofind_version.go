@@ -35,3 +35,5 @@ func WoofindVersion() {
         color.N, color.GG, homepage, color.N,
     )
 }
+
+// Copyright (c) 2026 Zeronetsec
