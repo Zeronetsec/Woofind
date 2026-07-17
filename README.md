@@ -1,8 +1,8 @@
 <!-- https://github.com/Zeronetsec/Woofind -->
 
-[![version](https://img.shields.io/badge/Woofind-Version%200.1-blue.svg)]()
-[![os](https://img.shields.io/badge/Supported%20OS-Linux-blue.svg)]()
-[![license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<img src="https://img.shields.io/badge/Woofind-Version%200.1-blue.svg?style=square&logo=go" />
+<img src="https://img.shields.io/badge/Supported%20OS-Linux-blue.svg?style=square&logo=linux" />
+<img src="https://img.shields.io/badge/License-MIT-blue.svg?style=square&logo=github" />
 
 # Woofind
 Woofind is a CLI toolkit for system exploration, security auditing, and data inspection.
