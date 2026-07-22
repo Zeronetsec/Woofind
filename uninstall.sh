@@ -53,7 +53,7 @@ install::getinstall \
     "Removing: ${GG}${bin}/woofind${N}"
 
 install::getinstall \
-    "command rm -rf ${HOME}/.woofind_log"
+    "command rm -rf ${HOME}/.woofind_log" \
     "Removing: ${GG}${HOME}/.woofind_log${N}"
 
 echo -e "${GG}[+] ${N}Woofind removed"
