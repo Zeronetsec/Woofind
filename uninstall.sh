@@ -52,9 +52,11 @@ install::getinstall \
     "command rm -f ${bin}/woofind" \
     "Removing: ${GG}${bin}/woofind${N}"
 
-install::getinstall \
-    "command rm -rf ${HOME}/.woofind_log" \
-    "Removing: ${GG}${HOME}/.woofind_log${N}"
+if [[ -d "${HOME}/.woofind_log" ]]; then
+    install::getinstall \
+        "command rm -rf ${HOME}/.woofind_log" \
+        "Removing: ${GG}${HOME}/.woofind_log${N}"
+fi
 
 echo -e "${GG}[+] ${N}Woofind removed"
 
