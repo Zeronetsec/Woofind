@@ -31,7 +31,7 @@ function install::installer() {
 
         install::getinstall \
             "command go build -v -o woofind" \
-            "Building: ${GG}woofind${N}"
+            "Compiling: ${GG}woofind${N}"
         cd
     )
 
