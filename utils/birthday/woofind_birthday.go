@@ -13,7 +13,7 @@ func WoofindBirthDay() {
     now := time.Now().Format("01-02")
     if now == birthDate {
         fmt.Printf(
-            "%s› %sHappy birthday for %swoofind %s🎉\n",
+            "%s› %sHappy birthday for %sWoofind %s🎉\n",
             color.R, color.N, color.GG, color.N,
         )
         fmt.Println()
