@@ -32,7 +32,11 @@ func MemoryAddress(varName string, shiftAddrStr string) {
         }
     }
 
-    origPtr := uintptr(unsafe.Pointer(&val))
+    origPtr := uintptr(
+        unsafe.Pointer(
+            unsafe.StringData(val),
+        ),
+    )
     shiftedPtr := origPtr + uintptr(shift)
 
     fmt.Printf(

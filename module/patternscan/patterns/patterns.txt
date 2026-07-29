@@ -1,41 +1,60 @@
-# https://github.com/Zeronetsec/Woofind
-
-exec
-exec.Command
-sh -c
-bash -c
-system(
-popen(
-chmod 777
-os.Chmod
-chown
-setuid
-curl http
-wget http
-http.Get
-net/http
-password =
-passwd =
-api_key
-apikey
-secret
-token
-os.Remove
-os.RemoveAll
-rm -rf
-fmt.Scan
-bufio.NewReader
-os.Args
-eval(
-exec(
-Function(
-base64
-hex.Decode
-DecodeString
-password=
-api_key
-BEGIN RSA PRIVATE KEY
-DB_PASSWORD
-secret_token
-
-# Copyright (c) 2026 Zeronetsec
+/dev/tcp/
+/etc/passwd
+/etc/shadow
+/root/.ssh
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+Authorization: Bearer
+BEARER_TOKEN
+BEGIN OPENSSH PRIVATE KEY
+BEGIN PGP PRIVATE KEY BLOCK
+GITHUB_TOKEN
+JWT_SECRET
+WScript.Shell
+\x00\x00\x00
+archive/zip
+bash -i
+cmd.Output()
+cmd.Run()
+cmd.Start()
+cmd.exe /c
+compress/gzip
+crontab -e
+crypto/aes
+crypto/cipher
+crypto/des
+crypto/rc4
+curl -X POST
+curl -s
+encoding/gob
+html/template
+http.Client
+http.Post(
+id_rsa
+io.ReadAll(res.Body)
+ioutil.WriteFile
+mongodb://
+mysql://
+nc -e
+ncat -e
+net.Dial(
+net.Listen(
+os.OpenFile
+os.Rename
+os.Setenv
+os.WriteFile
+postgres://
+powershell.exe -c
+reflect.ValueOf
+requests.get(
+rot13
+shred -u
+sql.Open(
+syscall.Exec
+syscall.ForkExec
+text/template
+unsafe.Pointer
+urllib.request
+wget -q
+x-api-key
+~/.ssh/authorized_keys
