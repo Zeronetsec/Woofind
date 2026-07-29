@@ -20,10 +20,17 @@ func WoofindConsole(input string) {
         "--checkroot": Checkroot{},
         "--dumpstring": Dumpstring{},
         "--decode": Decode{},
-        "--misconfind": Misconfind{},
         "--uwu": UWU{},
         "--version": Version{},
         "--help": Helper{},
+        "--pattern-scan": PatternScan{},
+        "--permission": Permission{},
+        "--owner": Owner{},
+        "--capability": Capability{},
+        "--varaddr": VarAddr{},
+        "--dumpenvaddr": DumpEnvAddr{},
+        "--useraudit": UserAudit{},
+        "--list": List{},
     }
 
     if cmd, ok := commands[args[1]]; ok {

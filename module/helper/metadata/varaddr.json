@@ -1,0 +1,5 @@
+{
+    "Command": "--varaddr",
+    "Args": "<var> [--shiftaddr <value>]",
+    "Description": "display the memory address of a target variable"
+}

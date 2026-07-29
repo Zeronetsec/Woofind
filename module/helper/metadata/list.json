@@ -1,0 +1,5 @@
+{
+    "Command": "--list",
+    "Args": "<caplists|decoders>",
+    "Description": "list supported module capability"
+}

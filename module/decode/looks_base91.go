@@ -2,19 +2,17 @@
 
 package decode
 
-import (
-    "strings"
-)
+func looksBase91(s string) bool {
+    if len(s) == 0 {
+        return false
+    }
 
-func looksBase16(s string) bool {
     for _, c := range s {
-        if !strings.Contains(
-            "0123456789abcdefABCDEF",
-            string(c),
-        ) {
+        if c > 255 || b91DecTable[c] == -1 {
             return false
         }
     }
+
     return true
 }
 

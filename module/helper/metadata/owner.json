@@ -1,0 +1,5 @@
+{
+    "Command": "--owner",
+    "Args": "<path> [<own:own:...>] [--threads <value>] [--force]",
+    "Description": "scan files or directories owned by specific users or groups"
+}

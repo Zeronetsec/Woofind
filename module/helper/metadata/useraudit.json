@@ -1,0 +1,5 @@
+{
+    "Command": "--useraudit",
+    "Args": "[--passwd <file>] [--shadow <file>] [--shell <shell:shell:...>]",
+    "Description": "audit passwd and shadow files to detect suspicious users"
+}

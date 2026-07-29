@@ -4,14 +4,27 @@ package decode
 
 import (
     "fmt"
-    "encoding/hex"
+    "strings"
     "encoding/base32"
     "encoding/base64"
+    "encoding/hex"
     "github.com/Zeronetsec/Woofind/utils/color"
 )
 
-func brute(data []byte, depth int) {
-    input := string(data)
+func brute(
+    data []byte,
+    depth int,
+    maxDepth int,
+    disabledMap map[string]bool,
+) {
+    if maxDepth != -1 && depth >= maxDepth {
+        return
+    }
+
+    input := strings.TrimSpace(string(data))
+    if input == "" {
+        return
+    }
 
     decoders := []struct {
         name string
@@ -25,6 +38,7 @@ func brute(data []byte, depth int) {
                 return hex.DecodeString(s)
             },
         },
+
         {
             "base32",
             looksBase32,
@@ -32,6 +46,7 @@ func brute(data []byte, depth int) {
                 return base32.StdEncoding.DecodeString(s)
             },
         },
+
         {
             "base64",
             looksBase64,
@@ -39,9 +54,67 @@ func brute(data []byte, depth int) {
                 return base64.StdEncoding.DecodeString(s)
             },
         },
+
+        {
+            "base85",
+            looksBase85,
+            decodeBase85,
+        },
+
+        {
+            "base89",
+            looksBase89,
+            decodeBase89,
+        },
+
+        {
+            "base91",
+            looksBase91,
+            decodeBase91,
+        },
+
+        {
+            "base122",
+            looksBase122,
+            decodeBase122,
+        },
+
+        {
+            "binary",
+            looksBinary,
+            decodeBinary,
+        },
+
+        {
+            "base58",
+            looksBase58,
+            decodeBase58,
+        },
+
+        {
+            "rot13",
+            looksRot13,
+            decodeRot13,
+        },
+
+        {
+            "url",
+            looksURL,
+            decodeURL,
+        },
+
+        {
+            "morse",
+            looksMorse,
+            decodeMorse,
+        },
     }
 
     for _, d := range decoders {
+        if disabledMap[d.name] {
+            continue
+        }
+
         steps++
 
         if !d.check(input) {
@@ -53,49 +126,31 @@ func brute(data []byte, depth int) {
             continue
         }
 
-        str := string(decoded)
+        str := strings.TrimSpace(string(decoded))
         if visited[str] {
             continue
         }
 
         visited[str] = true
+        decoded = []byte(str)
 
         if !looksReasonable(decoded) {
             continue
         }
 
-        fmt.Println()
         fmt.Printf(
-            "%sLayer: %s%d%s\n",
-            color.N, color.GG, depth+1, color.N,
+            "%s[*] %sBrute: %slay%s=%s%d %sdec%s=%s%s %slen%s=%s%d %sprtl%s=%s%.1f%% %sent%s=%s%.2f %sres%s=%s%s%s\n",
+            color.B, color.N,
+            color.GG, color.DG, color.CC, depth+1,
+            color.GG, color.DG, color.CC, d.name,
+            color.GG, color.DG, color.CC, len(decoded),
+            color.GG, color.DG, color.CC, printableRatio(decoded)*100,
+            color.GG, color.DG, color.CC, entropy(decoded),
+            color.GG, color.DG, color.YY, str, color.N,
         )
 
-        fmt.Printf(
-            "%sDecoder: %s%s%s\n",
-            color.N, color.GG, d.name, color.N,
-        )
-
-        fmt.Printf(
-            "%sLength: %s%d%s\n",
-            color.N, color.GG, len(decoded), color.N,
-        )
-
-        fmt.Printf(
-            "%sPrintable: %s%.1f%%%s\n",
-            color.N, color.GG, printableRatio(decoded)*100, color.N,
-        )
-
-        fmt.Printf(
-            "%sEntropy: %s%.2f%s\n",
-            color.N, color.GG, entropy(decoded), color.N,
-        )
-
-        fmt.Printf(
-            "%sResult: %s%s%s\n",
-            color.N, color.GG, str, color.N,
-        )
-
-        brute(decoded, depth+1)
+        idx = 1
+        brute(decoded, depth+1, maxDepth, disabledMap)
     }
 }
 

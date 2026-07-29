@@ -1,0 +1,5 @@
+{
+    "Command": "--capability",
+    "Args": "<path> [<cap:cap:...>] [--threads <value>]",
+    "Description": "scan files or directories for specific Linux capabilities"
+}

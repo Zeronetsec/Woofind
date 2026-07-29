@@ -1,0 +1,5 @@
+{
+    "Command": "--dumpenvaddr",
+    "Args": "[--shiftaddr <value>]",
+    "Description": "dump memory addresses of all environment variables"
+}

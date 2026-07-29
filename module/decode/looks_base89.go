@@ -6,15 +6,17 @@ import (
     "strings"
 )
 
-func looksBase64(s string) bool {
+func looksBase89(s string) bool {
+    if len(s) == 0 {
+        return false
+    }
+
     for _, c := range s {
-        if !strings.Contains(
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
-            string(c),
-        ) {
+        if !strings.ContainsRune(b89Alphabet, c) {
             return false
         }
     }
+
     return true
 }
 

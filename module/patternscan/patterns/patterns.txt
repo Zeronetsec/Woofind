@@ -32,5 +32,10 @@ Function(
 base64
 hex.Decode
 DecodeString
+password=
+api_key
+BEGIN RSA PRIVATE KEY
+DB_PASSWORD
+secret_token
 
 # Copyright (c) 2026 Zeronetsec

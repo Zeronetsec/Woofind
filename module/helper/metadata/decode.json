@@ -1,5 +1,5 @@
 {
     "Command": "--decode",
-    "Args": "<string|file>",
-    "Description": "automatically detect and decode multiple encodings"
+    "Args": "<string|file> [--limit <unlimit|value>] [--disable <dec:dec:...>]",
+    "Description": "automatically detect and decode multiple encodings (base{16,32,57,64,85,89,91,122}, binary/01, rot13, url, morse)"
 }

@@ -1,0 +1,5 @@
+{
+    "Command": "--pattern-scan",
+    "Args": "<path> [<patterns.txt>] [--threads <value>] [--case-insensitive <true|false>]",
+    "Description": "scan files or directories for target string patterns"
+}

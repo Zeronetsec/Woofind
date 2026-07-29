@@ -1,0 +1,5 @@
+{
+    "Command": "--permission",
+    "Args": "<path> [<xxxx:xxxx:...>] [--threads <value>]",
+    "Description": "scan files or directories for specific permissions"
+}
