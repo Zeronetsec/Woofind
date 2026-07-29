@@ -35,7 +35,7 @@ For more detailed installation and uninstallation instructions, see [.docs/insta
 ## Usage Example
 ```bash
 woofind --pattern-scan mydir/
-woofind --capability /usr/sbin/ 'cap_sys_ptrace:cap_stuid:cap_net_raw' --threads 100
+woofind --capability /usr/sbin/ 'cap_sys_ptrace:cap_setuid:cap_net_raw' --threads 100
 woofind --useraudit --passwd mypasswd --shadow myshadow
 woofind --decode susfile.txt --limit unlimit --disable 'rot13:morse'
 woofind --owner /usr/bin/ --force
