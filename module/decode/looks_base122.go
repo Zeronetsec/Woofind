@@ -10,8 +10,9 @@ func looksBase122(s string) bool {
     hasNonASCII := false
     for _, c := range s {
         if c == 0x00 {
-            return false 
+            return false
         }
+
         if c > 127 {
             hasNonASCII = true
         }

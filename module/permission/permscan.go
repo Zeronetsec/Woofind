@@ -72,7 +72,7 @@ func PermScan(targetPath, permStr string, threads int) {
             if err != nil {
                 return nil
             }
-            jobs <- path 
+            jobs <- path
             return nil
         },
     )

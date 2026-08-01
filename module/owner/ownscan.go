@@ -102,9 +102,9 @@ func OwnScan(
             path string, d fs.DirEntry, err error,
         ) error {
             if err != nil {
-                return nil 
+                return nil
             }
-            jobs <- path 
+            jobs <- path
             return nil
         },
     )

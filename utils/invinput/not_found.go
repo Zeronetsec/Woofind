@@ -12,7 +12,7 @@ import (
 func NotFound(input string) bool {
     _, err := os.Stat(input)
     if err == nil {
-        return true 
+        return true
     }
 
     if os.IsNotExist(err) {

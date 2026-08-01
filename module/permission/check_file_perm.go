@@ -37,7 +37,7 @@ func checkFilePerm(
     }
 
     if targetPerms[perm] {
-        strPerm := fmt.Sprintf("%04o", perm) 
+        strPerm := fmt.Sprintf("%04o", perm)
         tipe := "file"
         if info.IsDir() {
             tipe = "dir"
